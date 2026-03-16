@@ -10,9 +10,12 @@
 - title: Grants
   url: /grants
   match: grants
+- title: Join
+  url: /join
+  match: join
 - title: News
   url: /news
   match: news
-- title: Contact
-  url: /contact
-  match: contact
+- title: About
+  url: /about
+  match: about

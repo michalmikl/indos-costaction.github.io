@@ -48,7 +48,3 @@ The action is structured into several working groups, each focusing on specific 
     <td><h4>Co-leader:</h4>{% include person id="esin" %}</td>
   </table>
 </div>
-
-## Get Involved
-
-If you are interested in contributing to any of these Working Groups, please see the [contact page](/contact) or feel free to contact the Working Group leader.

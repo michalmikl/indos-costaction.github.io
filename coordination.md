@@ -37,7 +37,3 @@ Below you can find information about the core team coordinating our COST Action.
     {% include person id="michal" %}
   </div>
 </div>
-
-## Join Our Network
-
-We welcome researchers and students interested in improving neuroimaging data for sharing. If you would like to join our network or collaborate with us, please see the [contact page](/contact).
