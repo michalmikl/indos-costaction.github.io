@@ -1,4 +1,4 @@
-name: Update tags, categories and pagelist
+name: Update calendar
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # Allows manual triggering
 
 jobs:
-  update-tags-categories-and-pagelist:
+  update-calendar:
     runs-on: ubuntu-latest
     
     permissions:
@@ -26,12 +26,12 @@ jobs:
       with:
         python-version: '3.10'
     
-    # Step 3: Run the script
+    # Step 3: Run the Python script
     - name: Update the calendar
       env:
         CALENDAR_URL: ${{ secrets.CALENDAR_URL || vars.CALENDAR_URL }}
       run: |
-        python _scripts/calendar.py "$CALENDAR_URL" /assets/calendar.ics
+        python .github/scripts/calendar.py "$CALENDAR_URL" assets/calendar.ics
 
     # Step 4: Configure Git
     - name: Configure Git
