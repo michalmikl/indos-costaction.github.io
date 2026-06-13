@@ -11,6 +11,27 @@ import sys
 import re
 
 
+def unfold_ical_content(content):
+    """Unfold ICAL content by joining lines that start with space/tab."""
+    lines = content.splitlines()
+    unfolded = []
+    current_line = ""
+    
+    for line in lines:
+        if line and (line[0] == ' ' or line[0] == '\t'):
+            # This is a continuation line - add to current without the space
+            current_line += line[1:]  # Remove leading space/tab
+        else:
+            if current_line:
+                unfolded.append(current_line)
+            current_line = line
+    
+    if current_line:
+        unfolded.append(current_line)
+    
+    return '\n'.join(unfolded)
+
+
 def download_ics(url):
     """Download ICS file from URL (ignores SSL certificate errors)."""
     print(f"Downloading from: {url}")
@@ -36,21 +57,25 @@ def download_ics(url):
 
 def replace_locations(ics_content, new_location="announced via the mailing list"):
     """Replace LOCATION fields containing http:// or https:// with new text."""
+    ics_content = unfold_ical_content(ics_content)
     lines = ics_content.splitlines()
     modified_lines = []
     modified_count = 0
     
-    location_pattern = re.compile(r'^(LOCATION):(.*)$', re.IGNORECASE)
+    location_pattern = re.compile(r'^(LOCATION|DESCRIPTION|X-MICROSOFT-LOCATIONS|X-MICROSOFT-LOCATIONDISPLAYNAME).*?:(.*)$', re.IGNORECASE)
     
     for line in lines:
         match = location_pattern.match(line)
-        if match and re.search(r'https?://', match.group(2), re.IGNORECASE):
-            modified_lines.append(f"LOCATION:{new_location}")
+        entry = match.group(1) if match else None
+        value = match.group(2) if match else None
+
+        if match and re.search(r'https?://', value, re.IGNORECASE):
+            modified_lines.append(f"{entry}:{new_location}")
             modified_count += 1
         else:
             modified_lines.append(line)
     
-    print(f"Modified {modified_count} LOCATION entries containing URLs")
+    print(f"Modified {modified_count} entries containing URLs")
     return '\n'.join(modified_lines)
 
 
