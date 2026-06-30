@@ -35,6 +35,7 @@ Parameters:
 {% assign person = site.data.people | where: "id", include.id | first %}
 
 {% if person %}
+<div>
     {% if showroles == "yes" %}
     <h4>
     {% for role in person.roles %}
@@ -67,4 +68,5 @@ Parameters:
             <p>&nbsp;</p>
         {% endif %}
     {% endif %}
+</div>
 {% endif %}
