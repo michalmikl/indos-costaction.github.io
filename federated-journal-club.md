@@ -63,10 +63,10 @@ A few rules keep the pool flowing:
 
 ## Paper pool by topic
 
-The generation-1 pool holds **199 papers** across nine modalities, each seeded from the most-cited review articles and expanded through their key references. The lists below give titles and DOI links only; obtain the papers through your institution's library access.
+The generation-1 pool holds **200 papers** across nine modalities, each seeded from the most-cited review articles and expanded through their key references. The lists below give titles and DOI links only; obtain the papers through your institution's library access.
 
 <details>
-  <summary><strong>EEG</strong> — 28 papers (3 seed reviews)</summary>
+  <summary><strong>EEG</strong> — 29 papers (3 seed reviews)</summary>
   <p><em>Seed reviews (investigated):</em></p>
   <ul>
     <li><a href="https://doi.org/10.1016/j.jneumeth.2020.108961">EEG Integrated Platform Lossless (EEG-IP-L) pre-processing pipeline for objective signal quality assessment incorporating data annotation and blind source separation.</a> — J. Desjardins, 2020</li>
@@ -101,6 +101,7 @@ The generation-1 pool holds **199 papers** across nine modalities, each seeded f
     <li><a href="https://doi.org/10.1016/j.jneumeth.2015.02.025">A practical guide to the selection of independent components of the electroencephalogram for artifact correction.</a> — Maximilien Chaumon, 2015</li>
     <li><a href="https://doi.org/10.1038/s41597-019-0104-8">EEG-BIDS, an extension to the brain imaging data structure for electroencephalography</a> — C. Pernet, 2019</li>
     <li><a href="https://doi.org/10.1016/j.clinph.2009.01.015">Semi-automatic identification of independent components representing EEG artifact.</a> — F. C. Viola, 2009</li>
+    <li><a href="https://doi.org/10.1038/s41598-023-27528-0">EEG is better left alone</a> — A. Delorme, 2023</li>
     <li><a href="https://doi.org/10.1101/2020.01.29.925271">The Maryland Analysis of Developmental EEG (MADE) Pipeline</a> — R. Debnath, 2020</li>
     <li><a href="https://doi.org/10.1109/tnsre.2014.2346621">FORCe: Fully Online and Automated Artifact Removal for Brain-Computer Interfacing</a> — I. Daly, 2015</li>
   </ul>
@@ -378,7 +379,6 @@ The generation-1 pool holds **199 papers** across nine modalities, each seeded f
     <li><a href="https://doi.org/10.1007/s10278-020-00387-1">A Narrative Review on Clinical Applications of fNIRS</a> — Md. Asadur Rahman, 2020</li>
   </ul>
 </details>
-
 
 ## How to read a neuroimaging paper
 
