@@ -48,7 +48,7 @@ at [the Journal Club page](https://www.indos-costaction.eu/journal-club/).
 
 #### How we are federating a Journal Club
 
-We have curated a pool of **234 preprocessing papers** across nine imaging modalities
+We have curated a pool of **242 preprocessing papers** across nine imaging modalities
 plus a **cross-modality methods** category, accessible at
 [the Journal Club page](https://www.indos-costaction.eu/journal-club/).
 
